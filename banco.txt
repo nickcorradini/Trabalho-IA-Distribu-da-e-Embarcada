@@ -1,0 +1,19 @@
+ /* Initial beliefs and rules */
+dinheiro(5).
+
+/* Initial goals */
+
+
+/* Plans */
+
++!comprarcomida: dinheiro(D) & D>=1  <-
+	-+dinheiro(D-1); 
+	.print("Encomendando comida!!");
+	.send(loja,achieve,reporestoque).
+
+
++!comprarcomida:  dinheiro(D) & D<1  <-
+	.print("Aguardando dinheiro para fazer pedido!");
+	.send(dono,achieve,aviso);
+	.wait(5000);
+	!comprarcomida.

@@ -1,0 +1,8 @@
+/* Initial beliefs and rules */
+
+/* Initial goals */
+
+
+/* Plans */
+
++!aviso <- .print("Acabou o dinheiro da conta!!!").

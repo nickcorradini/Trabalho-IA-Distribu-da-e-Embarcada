@@ -1,0 +1,26 @@
+!horas.
+
++!horas <- 
+	.time(H,M,S);
+	.print("Sao ",H, " e ", M," minutos e ",S,"segundos");
+	.wait(1000);
+	!despertador(H,M,S);
+	!horas.
+
+
++!despertador(H,M,S): H=8 & M=0 & S=0 <-
+	
+	.send(alimentador,achieve,alimentarCachorro).
+
++!despertador(H,M,S): H=14 & M=0 & S=0 <-
+	
+	.send(alimentador,achieve,alimentarCachorro).
+
++!despertador(H,M,S): H=20 & M=0 & S=0 <-
+
+	.send(alimentador,achieve,alimentarCachorro).
+
+
+-!despertador(H,M,S) <-
+	.print(".").
+

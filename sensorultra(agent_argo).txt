@@ -1,0 +1,11 @@
+ /* Initial beliefs and rules */
+
+/* Initial goals */
+
+
+/* Plans */
+
++!sensor1 <-
+	.port(ttyUSB0);
+	.limit(1000);
+	.percepts(open).

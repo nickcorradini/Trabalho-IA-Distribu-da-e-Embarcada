@@ -1,0 +1,10 @@
+/* Initial beliefs and rules */
+
+/* Initial goals */
+
+/* Plans */
+
++!liga <- 
+	.port(ttyUSB0);
+	.limit(1000);
+	.act(acao1).

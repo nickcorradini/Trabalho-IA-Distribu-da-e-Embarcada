@@ -1,0 +1,65 @@
+// Definindo os pinos
+int c1Pin = 7;
+int c2Pin = 8;
+
+#define SERVO 10 // Porta Digital 6 PWM
+
+Servo s; // Variável Servo
+int pos; // Posição Servo
+
+#include <Javino.h>              
+#include <HCSR04.h>               
+
+#define PinEcho    9           
+#define PinTrig    12         
+Javino javino;
+HCSR04 hc(PinTrig, PinEcho);
+String strFlashLStatus, strLightStatus, strBreakLStatus, strBuzzerStatus, strMotorStatus, strSpeedStatus;
+int intSpeed;
+
+
+void setup() {
+  // Configurando os pinos como saídas
+  pinMode(c1Pin, OUTPUT);
+  pinMode(c2Pin, OUTPUT);
+  javino.act["acao1"]  = acao1;
+  javino.act]"acao2"]  = acao2;
+  javino.perceive(acao0);
+  javino.start(9600);
+
+
+}
+
+void loop() {
+
+  javino.run();
+
+}
+
+void acao0(){
+  Serial.begin(9600);
+  pinMode(PinEcho,    INPUT);
+  pinMode(PinTrig,    OUTPUT);  }
+
+
+}
+
+
+void acao1(){
+   // Ligar C1 e desligar C2
+  digitalWrite(c1Pin, HIGH);
+  digitalWrite(c2Pin, LOW);
+  delay(30000);
+  // Manter ligado por 30 segundos 
+}
+
+void acao2()
+{
+  delay(1000);
+  for(pos = 0; pos < 360; pos++)
+  {
+  s.write(pos);
+  delay(15);
+  }
+
+}

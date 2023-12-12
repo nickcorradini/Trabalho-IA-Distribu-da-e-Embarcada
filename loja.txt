@@ -1,0 +1,10 @@
+/* Initial beliefs and rules */
+
+/* Initial goals */
+
+
+/* Plans */
+
++!reporestoque <- 
+	.print("A racao foi entreque!").
+
