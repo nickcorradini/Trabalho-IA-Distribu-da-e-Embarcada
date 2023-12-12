@@ -13,15 +13,16 @@
 
 +!alimentarCachorro: estoquecomida(C) & C<20 <- 
 	.print("Esta na hora de alimentar o cachorro!");
-	.send(motor12,achieve,liga).
-
+	!motordepasso.
 +!motorpasso <- 
-	.print("Limpando a racao velha");
+	.print("Limpando a racao velha");	
+	.send(motorpasso,achieve,liga).
 	!motordoze.
 
 +!motordoze <- 
 	.print("colocando a racao!");
-	.send(motorpasso,achieve,liga).
+	.send(motor12,achieve,liga).
+	
 
 +!alimentarCachorro: estoquecomida(C) & 20<C & C<30 <-
 	.print("O estoque de comida esta baixo devo pedir para repor o estoque!");
